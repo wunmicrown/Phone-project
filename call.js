@@ -290,7 +290,7 @@ const loadCardGlo=()=> {
             let searchingcode = searchnetwork[q].code;
             if ((displaynumber.value.slice(0, 5) == "*311*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 20)) != -1) &&
-                (displaynumber.value.slice(20, 21) == "*310#") &&
+                (displaynumber.value.slice(20, 21) == "#") &&
                 (searchnetwork[q].cardname == "Glo") &&
                 (searchnetwork[q].status == "notused")) {
                 searchnetwork[q].status = "used";
@@ -303,7 +303,7 @@ const loadCardGlo=()=> {
                 displaybalance.innerHTML = "Recharge successful. Your account has been credited with GLO " + searchnetwork[q].cardamount + " . Your new account bal :₦" + gettt.global.toFixed(2);
             } else if ((displaynumber.value.slice(0, 5) == "*311*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 20)) != -1) &&
-                (displaynumber.value.slice(20, 21) == "*310#") &&
+                (displaynumber.value.slice(20, 21) == "#") &&
                 (searchnetwork[q].cardname == "Glo") &&
                 (searchnetwork[q].status == "used")) {
                 selectsim.style.display = "none";
@@ -411,3 +411,133 @@ const loadCardGlo=()=> {
 }
 
 // END OF CODES TO LOAD GLO CARD
+
+// BEGINNING OF CODES TO LOAD 9mobile CARD
+const loadCard9mobile=()=> {
+    if (displaynumber.value.length == 21) {
+        const searchnetwork = JSON.parse(localStorage.getItem("Voucher"));
+        for (var q = 0; q < searchnetwork.length; q++) {
+            let searchingcode = searchnetwork[q].code;
+            if ((displaynumber.value.slice(0, 5) == "*311*") &&
+                (searchingcode.search(displaynumber.value.slice(5, 20)) != -1) &&
+                (displaynumber.value.slice(20, 21) == "#") &&
+                (searchnetwork[q].cardname == "9mobile") &&
+                (searchnetwork[q].status == "notused")) {
+                searchnetwork[q].status = "used"
+                showbalance.style.display = "block";
+                selectsim.style.display = "none";
+                let getbal = parseInt(searchnetwork[q].cardamount);
+                let gettt = JSON.parse(localStorage.getItem("accountbal"));
+                gettt.mobile += getbal;
+                localStorage.setItem("accountbal", JSON.stringify(gettt));
+                displaybalance.innerHTML = "Recharge successful. Your account has been credited with 9Mobile " + searchnetwork[q].cardamount + " . Your new account bal :₦" + gettt.mobile.toFixed(2);
+            } else if ((displaynumber.value.slice(0, 5) == "*222*") &&
+                (searchingcode.search(displaynumber.value.slice(5, 20)) != -1) &&
+                (displaynumber.value.slice(20, 21) == "#") &&
+                (searchnetwork[q].cardname == "9mobile") &&
+                (searchnetwork[q].status == "used")) {
+                selectsim.style.display = "none";
+                showbalance.style.display = "block";
+                displaybalance.innerHTML = "This card has been loaded by a customer. Thanks!!!";
+            }
+            localStorage.setItem("Voucher", JSON.stringify(searchnetwork));
+        }
+    } else if (displaynumber.value.slice(0, 5) == "*310#") {
+        selectsim.style.display = "none";
+        showbalance.style.display = "block";
+        const displaybal = JSON.parse(localStorage.getItem("accountbal"));
+        const showbal = displaybal.mobile;
+        displaybalance.innerHTML = ("Your 9Mobile account balance is ₦" + showbal.toFixed(2));
+    } else if ((displaynumber.value != "") && (displaynumber.value.length == 11) &&
+        ((displaynumber.value.slice(0, 3) == "070") ||
+            (displaynumber.value.slice(0, 3) == "080") ||
+            (displaynumber.value.slice(0, 3) == "090") ||
+            (displaynumber.value.slice(0, 3) == "081"))
+    ) {
+
+        let gettt = JSON.parse(localStorage.getItem("accountbal"));
+        if (gettt.mobile <= 0.50) {
+            calculating.style.display = "none";
+            calculatingfirst.style.display = "none";
+            callopacity.style.display = "none";
+            forcalls.style.display = "none";
+            forcallnumbers.style.display = "block";
+            invalidresult.style.display = "block";
+            showsomeresult.innerHTML = "Your account balance is too low for this call. You can borrow airtime or call back later.";
+            callersno.innerHTML = displaynumber.value;
+            network.innerHTML = "9Mobile";
+        } else if (gettt.mobile != 0) {
+            calculating.style.display = "none";
+            calculatingfirst.style.display = "none";
+            audioElement = new Audio('ringtone.mp3');
+            secondphone.classList.add("mysecondphone");
+            audioElement.play();
+            timeout = setInterval(checktimeout, 1000);
+            forcallnumbers.style.display = "block";
+            forcalls.style.display = "none";
+            callersno.innerHTML = displaynumber.value;
+            network.innerHTML = "9Mobile";
+            secondphone.style.display = "block";
+            reccall.style.display = "block";
+            networktwo.innerHTML = "9Mobile";
+            phoneno.innerHTML = "09090042156";
+        }
+    } else if ((displaynumber.value != "") && (displaynumber.value.length == 14) &&
+        ((displaynumber.value.slice(0, 4) == "+234") ||
+            (displaynumber.value.slice(0, 4) == "+229")
+        )
+    ) {
+        let gettt = JSON.parse(localStorage.getItem("accountbal"));
+        if (gettt.mobile <= 0.50) {
+            calculating.style.display = "none";
+            calculatingfirst.style.display = "none";
+            callopacity.style.display = "none";
+            forcalls.style.display = "none";
+            forcallnumbers.style.display = "block";
+            invalidresult.style.display = "block";
+            showsomeresult.innerHTML = "Your account balance is too low for this call. You can borrow airtime or call back later.";
+            callersno.innerHTML = displaynumber.value;
+            network.innerHTML = "9Mobile";
+        } else if (gettt.mobile != 0) {
+            calculating.style.display = "none";
+            calculatingfirst.style.display = "none";
+            audioElement = new Audio('ringtone.mp3');
+            secondphone.classList.add("mysecondphone");
+            audioElement.play();
+            timeout = setInterval(checktimeout, 1000);
+            forcallnumbers.style.display = "block";
+            forcalls.style.display = "none";
+            callersno.innerHTML = displaynumber.value;
+            network.innerHTML = "9Mobile";
+            secondphone.style.display = "block";
+            reccall.style.display = "block";
+            networktwo.innerHTML = "9Mobile";
+            phoneno.innerHTML = "09090042156";
+        }
+    } else if ((displaynumber.value != "") && (displaynumber.value.length == 11) &&
+        ((displaynumber.value.slice(0, 3) != "070") ||
+            (displaynumber.value.slice(0, 3) != "080") ||
+            (displaynumber.value.slice(0, 3) != "090") ||
+            (displaynumber.value.slice(0, 3) != "081")
+        )
+    ) {
+        callopacity.style.display = "none";
+        forcalls.style.display = "none";
+        forcallnumbers.style.display = "block";
+        invalidresult.style.display = "block";
+        showsomeresult.innerHTML = "This number does not exist.please, check the number and try again later.";
+        calculatingfirst.style.display = "none";
+        callersno.innerHTML = displaynumber.value;
+        network.innerHTML = "9Mobile";
+    } else {
+        callopacity.style.display = "none";
+        forcalls.style.display = "none";
+        forcallnumbers.style.display = "block";
+        invalidresult.style.display = "block";
+        showsomeresult.innerHTML = "This number does not exist.please, check the number and try again later.";
+        calculatingfirst.style.display = "none";
+        callersno.innerHTML = displaynumber.value;
+        network.innerHTML = "9Mobile";
+    }
+}
+//  END OF CODES TO LOAD 9mobile CARD
