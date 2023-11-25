@@ -3,3 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+.all {
+    background-image: url(img/voucherbg.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+	height: 650px;
+	overflow-y: auto;
+	border: 5px solid rgba(0,0,0, 0.3);
+	border-radius: 30px;
+	width: 300px;
+	position: relative;
+
+}
