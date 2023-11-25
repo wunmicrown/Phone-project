@@ -43,3 +43,51 @@ option{
 	height: 330px;
 	overflow-y: auto;
 }
+.firstinput {
+	background-color: rgba(255,255,255, 1); 
+	border: none;
+	border-radius: 50px;
+	outline: none;
+}
+
+::placeholder {
+	text-align: center;
+}
+
+
+
+#allDiv{
+	background-color: rgba(0,0,0, 0.2);
+	margin-bottom: 10px;
+	text-align: center;
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: 15pt;
+}
+
+#alllSpan {
+	background-color: rgba(0,0,0, 0.2);
+	padding: 3px; 
+}
+
+#secondspan{
+	float: right;
+}
+
+.all2 {
+	background-color: rgba(0,0,0, 1);
+	height: 600px;
+	border:rgba(0,0,0, 0,5);
+	border-radius: 30px;
+	width: 300px;
+	padding: 10px 5px 5px 5px;
+	user-select: none;
+}
+.inner {
+	height: 580px;  	
+	border-radius: 30px;
+	background-color: rgba(0,0,0, 0.3);
+	padding: 10px 0px;
+	user-select: none;
+}
+/* End Of Voulcher Css */
