@@ -541,3 +541,42 @@ const loadCard9mobile=()=> {
     }
 }
 //  END OF CODES TO LOAD 9mobile CARD
+
+let int;
+let count;
+let check = 1;
+let one = 0;
+let two = 0;
+let three = 0;
+let countsec = 0;
+let getbalance;
+let gettb;
+console.log(getbalance);
+let getmtn;
+let getairtel;
+let getglo;
+let getmobile;
+const receiveCall = () => {
+    gettb = JSON.parse(localStorage.getItem("accountbal"));
+    one = 0;
+    two = 0;
+    three = 0;
+    loadhours.innerHTML = " ";
+    loadminutes.innerHTML = "00:";
+    loadseconds.innerHTML = "00";
+    firstloadhours.innerHTML = " ";
+    firstloadminutes.innerHTML = "00:";
+    firstloadseconds.innerHTML = "00";
+    getbalance = JSON.parse(localStorage.getItem("accountbal"));
+    getmtn = getbalance.mtnbal;
+    getairtel = getbalance.airtelbal;
+    getglo = getbalance.global;
+    getmobile = getbalance.mobile;
+    reccall.style.display = "none";
+    check = 2;
+    int = setInterval(receive, 1000);
+    count = setInterval(timeloading, 1000);
+    calculating.style.display = "block";
+    calculatingfirst.style.display = "block";
+    audioElement.pause();
+}
