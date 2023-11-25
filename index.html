@@ -69,17 +69,20 @@
                         <!-- Toogle Div Section -->
                         <div id="firstdisplay" ondblclick="openMe()"></div>
                         <div id="anotherinner" ondblclick="offMe()">
-                            <!-- Phone screen section -->
-                            <div class="network-status-icons">
+							<!-- Phone screen section -->
+							<div class="network-status-icons">
 								<span><img src="img/whitesignal1.png"></span>
 								<span><img src="img/whitesignal21.png"></span>
 								<span><img src="img/whitesignal1.png"></span>
 								<span><img src="img/whitesignal1.png"></span>
 								<span><img src="img/whitebattery1.png" class="pl-1"></span>
 							</div>
-                            <div class="text-white font-weight-bold text-center" id="displaydate"></div>
-                            <div class="text-white font-weight-bold text-center h1" id="displaytime"></div>
-                            <div class="screen-button-container pl-2 pr-2">
+
+
+							<div class="text-white font-weight-bold text-center" id="displaydate"></div>
+							<div class="text-white font-weight-bold text-center h1" id="displaytime"></div>
+
+							<div class="screen-button-container pl-2 pr-2">
 								<div class="bg-warning" onclick="openGame()"><img src="img/game.1.png" class="m-1">
 								</div>
 								<div class="bg-danger" onclick="displayCal()"><img src="img/calculator1.png"
@@ -87,15 +90,61 @@
 								<div class="bg-light"><img src="img/music1.png" class="m-1"></div>
 								<div class="bg-info"><img src="img/chrome1.png" class="m-1"></div>
 							</div>
-                            <div class="w-25 mx-auto"><img src="img/more1.png" class="pl-3"></div>
-                            <div class="screen-button-container2 pl-2 pr-2">
+
+							<div class="w-25 mx-auto"><img src="img/more1.png" class="pl-3"></div>
+							<div class="screen-button-container2 pl-2 pr-2">
 								<div class="bg-success" onclick="displayCall()"><img src="img/phone1.png" class="m-1">
 								</div>
 								<div class="bg-primary"><img src="img/contact1.png" class="m-1"></div>
 								<div class="bg-info"><img src="img/message1.png" class="m-1"></div>
 								<div class="bg-secondary"><img src="img/camera1.png" class="m-1"></div>
 							</div>
-                        </div>
+						</div>
+                        <!-- CALLING NUMBER SECTION -->
+						<div id="forcallnumbers">
+							<div class="ml-3 mt-3 calldetails">
+								<span class="text-white h6">Calling via</span>
+								<span class="text-white h5" id="network"></span><br>
+								<span class="text-white h4" id="callersno"></span>
+							</div>
+
+							<div class="w-50 mx-auto text-white h6 text-center" id="calculatingfirst">
+								<span id="firstloadhours"></span>
+								<span id="firstloadminutes"></span>
+								<span id="firstloadseconds"></span>
+							</div>
+
+							<div class="w-50 mx-auto mt-5 callicon">
+								<div>
+									<img src="img/speaker1.png" class="p-2">
+								</div>
+
+								<div class="ml-3">
+									<img src="img/mute1.png" class="p-2">
+								</div>
+
+								<div class="ml-3">
+									<img src="img/bullet1.png" class="p-2">
+								</div>
+
+							</div>
+							<div class="showw">
+								<div id="invalidresult" class=" bg-light rounded p-3 w-75 mt-3 mx-auto text-center">
+									<p class="text-dark" id="showsomeresult"></p>
+								</div>
+							</div>
+
+
+							<div class="w-50 mx-auto ml-5 mt-3">
+								<img src="img/maleuser1.png" class="pl-3 pt-5">
+							</div>
+
+							<div class="w-50 mx-auto mt-4">
+								<div class="bg-danger rounded-pill mt-3 shadow-sm" id="makecall" onclick="endCall()">
+									<img src="img/phone1.png" class="w-75">
+								</div>
+							</div>
+						</div>
                     </div>
                 </div>
             </div>
