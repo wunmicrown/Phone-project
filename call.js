@@ -804,3 +804,16 @@ const endCall = () => {
     }
 
 }
+
+ const checktimeout = () => {
+    if (audioElement.currentTime > 30) {
+        audioElement.pause();
+        secondphone.style.display = "none";
+        forcalls.style.display = "block";
+        callopacity.style.display = "block";
+        selectsim.style.display = "none";
+        showbalance.style.display = "block";
+        displaybalance.innerHTML = "Timeout";
+        clearInterval(timeout);
+    }
+}
