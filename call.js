@@ -47,3 +47,16 @@ const clean =()=> {
     showdisplay.innerHTML = ""
     showresult.innerHTML = "0"
 }
+const onOff=()=> {
+    if (btn2.innerHTML == "ON") {
+        btn2.innerHTML = "OFF"
+        showdisplay.innerHTML = " "
+        showresult.innerHTML = "0"
+        showresult.style.display = "block"
+        showdisplay.style.display = "block"
+    } else {
+        btn2.innerHTML = "ON"
+        showdisplay.style.display = "none"
+        showresult.style.display = "none"
+    }
+}
