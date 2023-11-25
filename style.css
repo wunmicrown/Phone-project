@@ -1,7 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+	box-sizing: border-box;
 }
 /* Voulcher css */
 .all {
@@ -43,6 +41,7 @@ option{
 	height: 330px;
 	overflow-y: auto;
 }
+
 .firstinput {
 	background-color: rgba(255,255,255, 1); 
 	border: none;
@@ -91,6 +90,7 @@ option{
 	user-select: none;
 }
 /* End Of Voulcher Css */
+/* Phone screen css */
 .house {
 	display: flex;
 	flex-direction: row;
@@ -104,6 +104,7 @@ option{
 	width: 20px;
 	padding: 5px;
 }
+
 .camera-section {
 	background-color: rgba(255,255,255, 0.2);
 	height: 10px;
@@ -125,6 +126,7 @@ option{
 	margin-left: 170px;
 	width: 40%;
 }
+
 #firstdisplay {
 	height: 510px;
 	background-color: rgba(255,255,255, 0.025);
@@ -138,12 +140,14 @@ option{
 	position: relative;
 	user-select: none;
 }
+
 #displaydate {
 	margin-top: 70%;
 	font-size: 15pt;
 	font-family: Consolas;
 	user-select: none;
 }
+
 .screen-button-container2 {
 	height: 50px;
 	display: flex;
@@ -174,3 +178,302 @@ option{
 	border-radius: 10px;
 	user-select: none;
 }
+
+.forcall {
+	z-index: 1000;
+	position: relative;
+	height: 516px;
+	background-color: white;
+	margin-top: -189%;
+	padding: 2px;
+	user-select: none;
+}
+
+#fornumbers {
+	background-color: white;
+	box-shadow: inset 0px 0px 25px 0px rgba(0,0,0, 0.1);
+	user-select: none;
+}
+
+.numberbox {
+	height: 40px;
+	box-shadow: inset 0px 0px 25px 0px rgba(0,0,0, 0.1);
+	text-align: center;
+	font-size: 17pt;
+	position: relative;
+	user-select: none;
+}
+
+#makecall {
+	height: 50px;
+	width: 50px;
+	margin-left: 35px;
+	margin-bottom: 5px;
+	user-select: none;
+}
+#makecall img {
+	margin: 7px;
+	user-select: none;
+}
+
+#displaynumber {
+	outline: none;
+	border: none;
+	user-select: none;
+}
+
+.text {
+	font-size: 10pt;
+	user-select: none;
+}
+
+.button {
+	outline: none !important;
+	user-select: none;
+}
+
+#selectsim {
+	position: relative;
+	height: 40%;
+	user-select: none;
+}
+/* End Of Phone screen css */
+.forall {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	user-select: none;
+}
+
+#forcallnumbers {
+	background-image: url("img/bd10.jpg");
+	background-size: cover;
+	background-blend-mode: color-dodge;
+	background-color: rgba(14,58,107, 0.9) !important;
+	height: 516px;
+	margin-top: -178%;
+	position: relative;
+	padding: 5px;
+	user-select: none;
+}
+
+#selectsim {
+	margin-top: 40% !important;
+	height: 200px;
+	user-select: none;
+}
+#callopacity {
+	background-color: rgba(0,0,0, 0.5);
+	height: 490px;
+	position: relative;
+	padding: 5px;
+	user-select: none;
+}
+
+#showbalance {
+	margin-top: 50% !important;
+	margin-left: 13%;
+	user-select: none;
+}
+
+button {
+	box-shadow: none !important;
+}
+
+.callicon {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.callicon div {
+	background-color: rgba(47,177,237, 0.5);
+	height: 45px;
+	width: 45px; 
+	border-radius: 100%;
+}
+
+.calldetails {
+	height: 60px;
+}
+
+.forreceive {
+	background-image: url("img/me.jpg");
+	background-size: cover;
+	background-blend-mode: color-dodge;
+	background-color: rgba(14,58,107, 0.9) !important;
+	height: 511px;
+	position: relative;
+	padding: 5px;
+	user-select: none;
+}
+
+#reccall {
+	height: 50px;
+	width: 50px;
+	margin-left: 35px;
+	margin-bottom: 5px;
+	user-select: none;
+}
+#reccall img {
+	margin: 7px;
+	user-select: none;
+}
+
+#endcall {
+	height: 50px;
+	width: 50px;
+	margin-left: 35px;
+	margin-bottom: 5px;
+	user-select: none;
+}
+#endcall img {
+	margin: 7px;
+	user-select: none;
+}
+
+.showw {
+	height: 70px;
+}
+
+.mysecondphone {
+	animation-name: animate;
+	animation-duration: 4s;
+	animation-timing-function: ease;
+	animation-delay: -1s;
+}
+
+@keyframes animate {
+	from {margin-left: -300px;}
+	to {margin-left: 50px;}
+}
+
+
+/*GAME CSS*/
+
+#forgame {
+	/* background-color: rgba(255,255,255, 0.1) !important; */
+	background: black !important;
+	height: 516px;
+	position: relative;
+	flex-direction: column;
+	padding: 5px;
+	gap: 30px;
+	user-select: none;
+	display: none;
+}
+h2{
+    font-size: 1em;
+	text-align: center;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.reset{
+    padding: 8px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 50px;
+    color: red;
+    background: white;
+    border: none;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+}
+.reset:focus{
+    color: white;
+    background: red;
+}
+.game{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+.item{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background: white;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+}
+.item.boxOpen{
+    transform: rotateY(0deg);
+}
+.item::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(22, 22, 22);
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.boxOpen::after,
+.boxMatch::after{
+    transform: rotateY(180deg);
+}
+#winMessage {
+	font-size: 18px;
+	font-weight: bold;
+	color: green;
+	margin-top: 10px;
+}
+
+.hidden {
+	display: none;
+}
+
+/*  CAL CSS */
+
+.caculator{
+    background: #1b1c1c;
+    border-radius:  10px;
+	height: 499px;
+}
+.caculator form input{
+    border: 0;
+    padding: 0;
+    outline: 0;
+    width: 40px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(176, 169, 169, 0.1),5px 5px 15px rgba(35, 31, 31, 0.2);
+    background: transparent;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+}
+form .display{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+form .display input{
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    background: #fff;
+    color: black;
+    
+}
+form input.equal{
+    width: 237px;
+}
+form input.operate{
+    color: #33ffd8;
+}
+
+/* END OF  CAL CSS */
