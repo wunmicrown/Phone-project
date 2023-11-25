@@ -248,10 +248,10 @@ option{
 }
 
 #forcallnumbers {
-	background-image: url("img/bd10.jpg");
+	background-image: url("phone-dai-img.avif");
 	background-size: cover;
 	background-blend-mode: color-dodge;
-	background-color: rgba(14,58,107, 0.9) !important;
+	background-color: rgba(10, 52, 100, 0.8) !important;
 	height: 516px;
 	margin-top: -178%;
 	position: relative;
@@ -303,8 +303,8 @@ button {
 	background-image: url("image-me.jpeg");
 	background-size: cover;
 	background-blend-mode: color-dodge;
-	background-color: rgba(14,58,107, 0.9) !important;
-	height: 511px;
+    background-color: rgba(15, 40, 70, 0.8) !important;
+    height: 511px;
 	position: relative;
 	padding: 5px;
 	user-select: none;
