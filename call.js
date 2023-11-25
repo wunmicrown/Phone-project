@@ -9,7 +9,7 @@ if (localStorage.accountbal == "") {
 // BEGINNING OF CODES TO LOAD MTN CARD
 let audioElement;
 let timeout;
-function loadCard() {
+const loadCard =()=> {
     if (displaynumber.value.length == 23) {
         var searchnetwork = JSON.parse(localStorage.getItem("Voucher"));
         for (var q = 0; q < searchnetwork.length; q++) {
