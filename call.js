@@ -580,3 +580,56 @@ const receiveCall = () => {
     calculatingfirst.style.display = "block";
     audioElement.pause();
 }
+
+timeloading = () => {
+    one += 1;
+    countsec += 1;
+
+    if (one == 60) {
+        one = 0;
+        two += 1;
+    }
+
+    if (two == 60) {
+        two = 0;
+        three += 1
+    }
+    loadseconds.innerHTML = one;
+    loadminutes.innerHTML = two;
+    loadhours.innerHTML = three;
+    firstloadseconds.innerHTML = one;
+    firstloadminutes.innerHTML = two;
+    firstloadhours.innerHTML = three;
+
+    if (one < 10) {
+        loadseconds.innerHTML = `0${one}`;
+        firstloadseconds.innerHTML = `0${one}`;
+    } else {
+        loadseconds.innerHTML = one;
+        firstloadseconds.innerHTML = one;
+    }
+
+    if (two < 10) {
+        loadminutes.innerHTML = `0${two}:`;
+        firstloadminutes.innerHTML = `0${two}:`;
+    } else {
+        loadminutes.innerHTML = `${two}:`;
+        firstloadminutes.innerHTML = `${two}:`;
+    }
+
+    if (three < 10) {
+        loadhours.innerHTML = `0${three}:`;
+        firstloadhours.innerHTML = `0${three}:`;
+    } else {
+        loadhours.innerHTML = `${three}:`;
+        loadhours.innerHTML = `${three}:`;
+    }
+
+    if (three == 0) {
+        loadhours.style.display = "none";
+        firstloadhours.style.display = "none";
+    } else {
+        loadhours.style.display = "inline";
+        firstloadhours.style.display = "inline";
+    }
+}
