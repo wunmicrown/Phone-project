@@ -1,7 +1,7 @@
 if (localStorage.accountbal == null) {
     localStorage.setItem("accountbal", "");
 }
-var allBalance = { mtnbal: 0, airtelbal: 0, global: 0, mobile: 0 };
+const allBalance = { mtnbal: 0, airtelbal: 0, global: 0, mobile: 0 };
 
 if (localStorage.accountbal == "") {
     localStorage.setItem("accountbal", JSON.stringify(allBalance));
@@ -24,7 +24,7 @@ const loadCard =()=> {
                 showbalance.style.display = "block";
                 selectsim.style.display = "none";
                 let getbal = parseInt(searchnetwork[q].cardamount);
-                var gettt = JSON.parse(localStorage.getItem("accountbal"));
+                let gettt = JSON.parse(localStorage.getItem("accountbal"));
                 gettt.mtnbal += getbal;
                 displaybalance.innerHTML = "Recharge successful. Your account has been credited with MTN " + searchnetwork[q].cardamount + " . Your new account bal :₦" + gettt.mtnbal.toFixed(2);
                 localStorage.setItem("accountbal", JSON.stringify(gettt))
@@ -735,4 +735,72 @@ const receive = () => {
             clearInterval(count);
         }
     }
+}
+
+
+const endCall = () => {
+    one = 0;
+    two = 0;
+    three = 0;
+    if (check == 2) {
+        check = 1;
+        clearInterval(int);
+        clearInterval(count);
+        audioElement.pause();
+        forcallnumbers.style.display = "none";
+        forcalls.style.display = "block";
+        secondphone.style.display = "none";
+        invalidresult.style.display = "none";
+        selectsim.style.display = "none";
+        showbalance.style.display = "block";
+
+
+
+        if (network.innerHTML == "MTN") {
+            const newMtn = getmtn;
+            getbalance.mtnbal = newMtn;
+            localStorage.setItem("accountbal", JSON.stringify(getbalance));
+            const total = Number(gettb.mtnbal) - Number(getbalance.mtnbal);
+            displaybalance.innerHTML = "Last Call was " + countsec + " secs at ₦ " + total.toFixed(2) + ". New account balance is : ₦ " + getbalance.mtnbal.toFixed(2);
+        } else if (network.innerHTML == "Airtel") {
+            const newAirtel = getairtel;
+            getbalance.airtelbal = newAirtel;
+            localStorage.setItem("accountbal", JSON.stringify(getbalance));
+            const total = parseInt(gettb.airtelbal) - parseInt(getbalance.airtelbal);
+            displaybalance.innerHTML = "Last Call was " + countsec + " secs at ₦ " + total.toFixed(2) + ". New account balance is : ₦ " + getbalance.airtelbal.toFixed(2);
+        } else if (network.innerHTML == "Glo") {
+            const newGlo = getglo;
+            getbalance.global = newGlo;
+            localStorage.setItem("accountbal", JSON.stringify(getbalance));
+            const total = parseInt(gettb.global) - parseInt(getbalance.global);
+            displaybalance.innerHTML = "Last Call was " + countsec + " secs at ₦ " + total.toFixed(2) + ". New account balance is : ₦ " + getbalance.global.toFixed(2);
+        } else if (network.innerHTML == "9Mobile") {
+            const newMobile = getmobile;
+            getbalance.mobile = newMobile;
+            localStorage.setItem("accountbal", JSON.stringify(getbalance));
+            const total = parseInt(gettb.mobile) - parseInt(getbalance.mobile);
+            displaybalance.innerHTML = "Last Call was " + countsec + " secs at ₦ " + total.toFixed(2) + ". New account balance is : ₦ " + getbalance.mobile.toFixed(2);
+
+        }
+
+    } else {
+        if (audioElement == undefined) {
+            forcallnumbers.style.display = "block";
+            forcalls.style.display = "block";
+            callopacity.style.display = "none";
+            secondphone.style.display = "none";
+            invalidresult.style.display = "none";
+            selectsim.style.display = "none";
+        } else {
+            audioElement.pause();
+            forcallnumbers.style.display = "block";
+            forcalls.style.display = "block";
+            callopacity.style.display = "none";
+            secondphone.style.display = "none";
+            invalidresult.style.display = "none";
+            selectsim.style.display = "none";
+        }
+
+    }
+
 }
