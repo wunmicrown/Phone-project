@@ -14,25 +14,25 @@ calculatingfirst.style.display = "none";
 
 let d = new Date();
 displaydate.innerHTML = d.toDateString();
+
 var getTimeDate = () => {
     var j = new Date();
     let myhrs = j.getHours();
     let mymin = j.getMinutes();
     if (myhrs.toString().length < 2) {
-        myhrs = "0" + hr;
+        myhrs = "0" + myhrs; 
     }
     if (myhrs > 12) {
         myhrs = myhrs - 12;
-        displaytime.innerHTML = myhrs + ":" + mymin + " PM"
+        displaytime.innerHTML = myhrs + ":" + (mymin < 10 ? "0" : "") + mymin + " PM";
     } else {
-        displaytime.innerHTML = myhrs + ":" + mymin + " AM";
+        displaytime.innerHTML = myhrs + ":" + (mymin < 10 ? "0" : "") + mymin + " AM";
     }
 }
+
 setInterval(function () {
     getTimeDate();
-}, 1000)
-
-
+}, 1000);
 
 let checkOpen = 0;
 
