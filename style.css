@@ -362,6 +362,17 @@ button {
 	user-select: none;
 	display: none;
 }
+#forMusic {
+	background: rgb(78, 37, 37) !important;
+    color: lime;
+	height: 516px;
+	position: relative;
+	flex-direction: column;
+	padding: 5px;
+	gap: 30px;
+	user-select: none;
+	display: none;
+}
 h2{
     font-size: 1em;
 	text-align: center;
