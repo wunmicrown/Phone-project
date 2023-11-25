@@ -140,4 +140,3 @@ const displayCal = () => {
     anotherinner.style.display = "none";
     forcal.style.display = "block";
 }
-
