@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
 	box-sizing: border-box;
 }
 /* Voulcher css */
@@ -298,7 +300,7 @@ button {
 }
 
 .forreceive {
-	background-image: url("img/me.jpg");
+	background-image: url("image-me.jpeg");
 	background-size: cover;
 	background-blend-mode: color-dodge;
 	background-color: rgba(14,58,107, 0.9) !important;

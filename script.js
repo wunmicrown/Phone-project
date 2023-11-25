@@ -69,6 +69,7 @@ const goBack = () => {
         forcallnumbers.style.display = "none";
         forgame.style.display = "none";
         forcal.style.display = "none";
+        forMusic.style.display ="none"
     }
 
 }

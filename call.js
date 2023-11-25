@@ -551,7 +551,6 @@ let three = 0;
 let countsec = 0;
 let getbalance;
 let gettb;
-console.log(getbalance);
 let getmtn;
 let getairtel;
 let getglo;
