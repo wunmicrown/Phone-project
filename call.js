@@ -43,3 +43,7 @@ const equalTo =()=> {
         showresult.innerHTML = gg;
     }
 }
+const clean =()=> {
+    showdisplay.innerHTML = ""
+    showresult.innerHTML = "0"
+}
