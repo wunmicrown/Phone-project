@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Voulcher css */
 .all {
     background-image: url(img/voucherbg.png);
     background-attachment: fixed;
@@ -15,4 +16,30 @@
 	width: 300px;
 	position: relative;
 
+}
+option{
+    background-color: #00345B;
+    color: #ffff;
+}
+.selectcard{
+    background-color: #00345B;
+    border: 2px solid #00345B;
+    border: none;
+	border-radius: 10px;
+    color: #ffff;
+	outline: none;
+    padding: 8px;
+}
+::-webkit-scrollbar{
+	width: 0px;
+}
+
+#infogenerate {
+	position: absolute;
+	height: 200px;
+	margin-top: -35%;
+}
+#result {
+	height: 330px;
+	overflow-y: auto;
 }
