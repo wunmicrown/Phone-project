@@ -633,3 +633,106 @@ timeloading = () => {
         firstloadhours.style.display = "inline";
     }
 }
+const receive = () => {
+    if (network.innerHTML == "MTN") {
+        getmtn = getmtn - 0.11;
+        const newMtn = getmtn;
+        getbalance.mtnbal = newMtn;
+        localStorage.setItem("accountbal", JSON.stringify(getbalance));
+        if (getbalance.mtnbal <= 0.50) {
+            forcalls.style.display = "block";
+            forcallnumbers.style.display = "none";
+            callopacity.style.display = "block";
+            selectsim.style.display = "none";
+            showbalance.style.display = "block";
+            displaybalance.innerHTML = "You have exhausted your airtime!!!";
+            one = 0;
+            two = 0;
+            three = 0;
+            loadhours.innerHTML = " ";
+            loadminutes.innerHTML = "00:";
+            loadseconds.innerHTML = "00";
+            firstloadhours.innerHTML = " ";
+            firstloadminutes.innerHTML = "00:";
+            firstloadseconds.innerHTML = "00";
+            secondphone.style.display = "none";
+            clearInterval(int);
+            clearInterval(count);
+        }
+    } else if (network.innerHTML == "Airtel") {
+        getairtel = getairtel - 0.12;
+        const newAirtel = getairtel;
+        getbalance.airtelbal = newAirtel;
+        localStorage.setItem("accountbal", JSON.stringify(getbalance));
+        if (getbalance.airtelbal <= 0.50) {
+            forcalls.style.display = "block";
+            forcallnumbers.style.display = "none";
+            callopacity.style.display = "block";
+            selectsim.style.display = "none";
+            showbalance.style.display = "block";
+            displaybalance.innerHTML = "You have exhausted your airtime!!!";
+            one = 0;
+            two = 0;
+            three = 0;
+            loadhours.innerHTML = " ";
+            loadminutes.innerHTML = "00:";
+            loadseconds.innerHTML = "00";
+            firstloadhours.innerHTML = " ";
+            firstloadminutes.innerHTML = "00:";
+            firstloadseconds.innerHTML = "00";
+            secondphone.style.display = "none";
+            clearInterval(int);
+            clearInterval(count);
+        }
+    } else if (network.innerHTML == "Glo") {
+        getglo = getglo - 0.11;
+        const newGlo = getglo;
+        getbalance.global = newGlo;
+        localStorage.setItem("accountbal", JSON.stringify(getbalance));
+        if (getbalance.global <= 0.50) {
+            forcalls.style.display = "block";
+            forcallnumbers.style.display = "none";
+            callopacity.style.display = "block";
+            selectsim.style.display = "none";
+            showbalance.style.display = "block";
+            displaybalance.innerHTML = "You have exhausted your airtime!!!";
+            one = 0;
+            two = 0;
+            three = 0;
+            loadhours.innerHTML = " ";
+            loadminutes.innerHTML = "00:";
+            loadseconds.innerHTML = "00";
+            firstloadhours.innerHTML = " ";
+            firstloadminutes.innerHTML = "00:";
+            firstloadseconds.innerHTML = "00";
+            secondphone.style.display = "none";
+            clearInterval(int);
+            clearInterval(count);
+        }
+    } else if (network.innerHTML == "9Mobile") {
+        getmobile = getmobile - 0.12;
+        const newMobile = getmobile;
+        getbalance.mobile = newMobile;
+        localStorage.setItem("accountbal", JSON.stringify(getbalance));
+        if (getbalance.mobile <= 0.50) {
+            forcalls.style.display = "block";
+            forcallnumbers.style.display = "none";
+            callopacity.style.display = "block";
+            selectsim.style.display = "none";
+            showbalance.style.display = "block";
+            displaybalance.innerHTML = "You have exhausted your airtime!!!";
+            one = 0;
+            two = 0;
+            three = 0;
+            loadhours.innerHTML = " ";
+            loadminutes.innerHTML = "00:";
+            loadseconds.innerHTML = "00";
+            firstloadhours.innerHTML = " ";
+            firstloadminutes.innerHTML = "00:";
+            firstloadseconds.innerHTML = "00";
+            secondphone.style.display = "none";
+            clearInterval(int);
+            clearInterval(count);
+        }
+    }
+}
