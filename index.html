@@ -10,6 +10,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="music.css">
     <title>PHONE PROJECT</title>
 </head>
 
@@ -209,7 +210,13 @@
                         </div>
                         <!-- BEGINING OF MUSIC SECTION -->
                         <div id="forMusic">
-                            Hello music
+                            <div class="audioPlayerDiv">
+                                <audio id="audioPlayer" controls></audio>
+                            </div>
+                            <div class="playPauseBtnDiv">
+                                <button id="playPauseBtn">Play</button>
+                            </div>
+                            <div id="playlist"></div>
                         </div>
                         <!-- End OF MUSIC SECTION -->
 
