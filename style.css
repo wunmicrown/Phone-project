@@ -129,6 +129,12 @@ option{
 	width: 40%;
 }
 
+.network-status-icons2 {
+	margin-left: 170px;
+	width: 40%;
+    background-color: #e8dce0;
+}
+
 #firstdisplay {
 	height: 510px;
 	background-color: rgba(255,255,255, 0.025);
@@ -153,6 +159,7 @@ option{
 .screen-button-container2 {
 	height: 50px;
 	display: flex;
+    margin: 0px 10px 0px 10px;
 	flex-direction: row;
 	justify-content: space-between;	
 	user-select: none;
@@ -162,6 +169,7 @@ option{
 	height: 50px;
 	display: flex;
 	flex-direction: row;
+    margin: 0px 10px 0px 10px;
 	justify-content: space-between;
 	margin-top: 20%;
 	user-select: none;
