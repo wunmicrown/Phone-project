@@ -17,6 +17,18 @@
 	position: relative;
 
 }
+.instruction-div{
+    color: #012E58;
+    filter: drop-shadow(0 0 0.35rem rgb(34, 0, 225));
+}
+.instruction-div:hover{
+    padding-top: 15px;
+    transition: 2s;
+    color: rgb(45, 78, 209);
+    font-size: 25px;
+    font-weight: 600;
+
+}
 option{
     background-color: #00345B;
     color: #ffff;
