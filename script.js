@@ -83,16 +83,7 @@ const openGame = () => {
     callopacity.style.display = "none";
     forcallnumbers.style.display = "none";
 }
-const openMusic = () => {
 
-    forMusic.style.display = "block";
-    forcalls.style.display = "none";
-    anotherinner.style.display = "none";
-    showbalance.style.display = "none";
-    infogenerate.style.display = "none";
-    callopacity.style.display = "none";
-    forcallnumbers.style.display = "none";
-}
 const simSelect = () => {
     if (displaynumber.value == "") {
         return;
