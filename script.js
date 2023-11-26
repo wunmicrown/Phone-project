@@ -48,6 +48,7 @@ const openMe = () => {
     forgame.style.display = "none";
     forMusic.style.display = "none"
     forcal.style.display = "none";
+    saveContact.style.display = "none";
 }
 
 
@@ -69,7 +70,8 @@ const goBack = () => {
         forcallnumbers.style.display = "none";
         forgame.style.display = "none";
         forcal.style.display = "none";
-        forMusic.style.display ="none"
+        forMusic.style.display ="none";
+        saveContact.style.display = "none";
     }
 
 }
