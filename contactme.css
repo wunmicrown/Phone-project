@@ -7,18 +7,114 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
 #saveContact {
     background: #ffff;
     color: black;
     height: 516px;
     position: relative;
     flex-direction: column;
-    padding: 5px;
-    gap: 30px;
+    padding: 15px;
     user-select: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* overflow: hidden; */
     display: none;
-}
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+#viewSection {
+    background: #ffff;
+    color: black;
+    height: 516px;
+    position: relative;
+    flex-direction: column;
+    padding: 15px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+#saveContact {
+      position: relative;
+      flex-direction: column;
+      padding: 15px;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  #saveContactContainer{
+      color: black;
+      height: 520px;
+      position: relative;
+      flex-direction: column;
+      padding: 15px;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .delete-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .go-to-view-section{
+      margin-top: 10px;
+      background-color: green;
+  }
+  .delete-btn:hover {
+    background-color: #d32f2f;
+  }

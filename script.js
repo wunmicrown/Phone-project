@@ -10,7 +10,9 @@ invalidresult.style.display = "none";
 forcal.style.display = "none";
 calculating.style.display = "none";
 calculatingfirst.style.display = "none";
-
+saveContact.style.display="none";
+viewSection.style.display="none";
+saveContactContainer.style.display="none";
 
 let d = new Date();
 displaydate.innerHTML = d.toDateString();
@@ -48,6 +50,8 @@ const openMe = () => {
     forgame.style.display = "none";
     forMusic.style.display = "none"
     forcal.style.display = "none";
+    viewSection.style.display="none"
+    saveContactContainer.style.display="none"
     saveContact.style.display = "none";
 }
 
@@ -71,6 +75,8 @@ const goBack = () => {
         forgame.style.display = "none";
         forcal.style.display = "none";
         forMusic.style.display ="none";
+        viewSection.style.display="none"
+        saveContactContainer.style.display="none"
         saveContact.style.display = "none";
     }
 
@@ -84,6 +90,7 @@ const openGame = () => {
     infogenerate.style.display = "none";
     callopacity.style.display = "none";
     forcallnumbers.style.display = "none";
+    viewSection.style.display = "none";
 }
 
 const simSelect = () => {

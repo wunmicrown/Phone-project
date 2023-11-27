@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="music.css">
     <link rel="stylesheet" href="contactme.css">
+    <link rel="stylesheet" href="camera.css">
     <title>PHONE PROJECT</title>
 </head>
 
@@ -101,9 +102,11 @@
                             <div class="screen-button-container2 pl-2 pr-2">
                                 <div class="bg-success" onclick="displayCall()"><img src="img/phone1.png" class="m-1">
                                 </div>
-                                <div class="bg-primary" onclick="contactMe()"><img src="img/contact1.png" class="m-1"></div>
+                                <div class="bg-primary" onclick="contactMe()"><img src="img/contact1.png" class="m-1">
+                                </div>
                                 <div class="bg-info"><img src="img/message1.png" class="m-1"></div>
-                                <div class="bg-secondary"><img src="img/camera1.png" class="m-1"></div>
+                                <div class="bg-secondary" onclick="camera1()"><img src="img/camera1.png" class="m-1">
+                                </div>
                             </div>
                         </div>
                         <!-- CALLING NUMBER SECTION -->
@@ -209,7 +212,7 @@
                             </div>
 
                         </div>
-                         <!-- End OF MEMORY GAME SECTION -->
+                        <!-- End OF MEMORY GAME SECTION -->
 
                         <!-- BEGINING OF MUSIC SECTION -->
                         <div id="forMusic">
@@ -224,10 +227,26 @@
                         <!-- End OF MUSIC SECTION -->
 
                         <!-- BEGINING OF SAVE CONTACT SECTION -->
-                        <div id="saveContact">
-                            srtyuiop
-
+                        <div id="saveContactContainer">
+                            <div class="container" id="saveContact">
+                                <h2>Save Contact</h2>
+                                <form id="contactForm">
+                                  <label for="name">Name:</label>
+                                  <input type="text" id="name" required>
+                                  <label for="contact">Contact:</label>
+                                  <input type="text" id="contact" required>
+                                  <button type="button" onclick="saveContact()">Save Contact</button>
+                                </form>
+                                <button class="go-to-view-section" onclick="goToViewSection()">View Contacts</button>
+                            </div>
+                            <div class="container" id="viewSection" >
+                                <h2>Contacts</h2>
+                                <ul id="contactList"></ul>
+                                <button onclick="goToSaveSection()">Go Back</button>
+                              </div>
                         </div>
+                        
+                         
                         <!-- END OF SAVE CONTACT SECTION -->
                         <!-- PHONE OPREATOR SECTION -->
                         <div class="w-100 mx-auto house mt-2">
@@ -476,6 +495,7 @@
     <script type="text/javascript" src="voulcher.js"></script>
     <script type="text/javascript" src="music.js"></script>
     <script type="text/javascript" src="contactme.js"></script>
+    <script type="text/javascript" src="camera.js"></script>
 </body>
 
 </html>
