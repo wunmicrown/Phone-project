@@ -52,7 +52,7 @@ const openMe = () => {
     forcal.style.display = "none";
     viewSection.style.display="none"
     saveContactContainer.style.display="none"
-    saveContact.style.display = "none";
+    // saveContact.style.display = "none";
 }
 
 
@@ -77,7 +77,7 @@ const goBack = () => {
         forMusic.style.display ="none";
         viewSection.style.display="none"
         saveContactContainer.style.display="none"
-        saveContact.style.display = "none";
+        // saveContact.style.display = "none";
     }
 
 }

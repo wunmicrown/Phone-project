@@ -14,7 +14,7 @@ const loadCard=()=> {
         const searchnetwork = JSON.parse(localStorage.getItem("Voucher"));
         for (let q = 0; q < searchnetwork.length; q++) {
             let searchingcode = searchnetwork[q].code;
-            if ((displaynumber.value.slice(0, 5) == "*555*") &&
+            if ((displaynumber.value.slice(0, 5) == "*311*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 22)) != -1) &&
                 (displaynumber.value.slice(22, 23) == "#") &&
                 (searchnetwork[q].cardname == "MTN") &&
