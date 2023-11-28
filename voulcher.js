@@ -1,5 +1,10 @@
 //    VOULCHER CARD BEGINNING 
 var array = [];
+const clearInputs = () => {
+    nocard.value = "";
+    selectcard.value = "Select Card";
+    amount.value = "Select Amount";
+}
 const generate=()=> {
     // result.innerHTML = " ";
     if (typeof (localStorage.getItem("Voucher")) == 'string') {
@@ -105,6 +110,9 @@ const generate=()=> {
         document.querySelector("#result").appendChild(allSpan);
         document.querySelector("#result").appendChild(divDiv);
     }
+    
+    clearInputs();
+
 }
 
 
