@@ -9,7 +9,7 @@ if (localStorage.accountbal == "") {
 // BEGINNING OF CODES TO LOAD MTN CARD
 let audioElement;
 let timeout;
-const loadCard=()=> {
+const loadCard = () => {
     if (displaynumber.value.length == 23) {
         const searchnetwork = JSON.parse(localStorage.getItem("Voucher"));
         for (let q = 0; q < searchnetwork.length; q++) {
@@ -142,7 +142,7 @@ const loadCard=()=> {
 
 // BEGINNING OF CODES TO LOAD AIRTEL CARD
 
-const loadCardAirtel=()=> {
+const loadCardAirtel = () => {
     if (displaynumber.value.length == 22) {
         const searchnetwork = JSON.parse(localStorage.getItem("Voucher"));
         for (let q = 0; q < searchnetwork.length; q++) {
@@ -283,7 +283,7 @@ const loadCardAirtel=()=> {
 
 // BEGINNING OF CODES TO LOAD GLO CARD
 
-const loadCardGlo=()=> {
+const loadCardGlo = () => {
     if (displaynumber.value.length == 21) {
         const searchnetwork = JSON.parse(localStorage.getItem("Voucher"));
         for (let q = 0; q < searchnetwork.length; q++) {
@@ -413,7 +413,7 @@ const loadCardGlo=()=> {
 // END OF CODES TO LOAD GLO CARD
 
 // BEGINNING OF CODES TO LOAD 9mobile CARD
-const loadCard9mobile=()=> {
+const loadCard9mobile = () => {
     if (displaynumber.value.length == 21) {
         const searchnetwork = JSON.parse(localStorage.getItem("Voucher"));
         for (var q = 0; q < searchnetwork.length; q++) {
@@ -804,7 +804,7 @@ const endCall = () => {
 
 }
 
- const checktimeout = () => {
+const checktimeout = () => {
     if (audioElement.currentTime > 30) {
         audioElement.pause();
         secondphone.style.display = "none";
