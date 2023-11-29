@@ -25,8 +25,23 @@
     padding-top: 15px;
     transition: 2s;
     color: rgb(45, 78, 209);
-    font-size: 25px;
     font-weight: 600;
+}
+@media screen and (max-width: 600px) {
+	.instruction-div{
+		color: #012E58;
+		font-size: 15px !important;
+		font-weight: 600 !important;
+		filter: drop-shadow(0 0 0.35rem rgb(34, 0, 225));
+	}
+	.instruction-div:hover{
+		padding-top: 15px;
+		transition: 2s;
+		font-size: 18px !important;
+		font-weight: 900 !important;
+		color: rgb(45, 78, 209);
+		font-weight: 600;
+	}
 }
 option{
     background-color: #00345B;
