@@ -60,7 +60,7 @@ const displayContacts=()=> {
   }
 }
 
-function deleteContact(index) {
+const deleteContact=(index)=> {
   contacts.splice(index, 1);
   saveToLocalStorage();
   displayContacts();
