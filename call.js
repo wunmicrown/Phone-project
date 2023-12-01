@@ -350,6 +350,7 @@ const loadCardGlo = () => {
             secondphone.style.display = "block";
             reccall.style.display = "block";
             networktwo.innerHTML = "Glo";
+            phoneno.innerHTML = "09090042156";
         }
     } else if ((displaynumber.value != "") && (displaynumber.value.length == 14) &&
         ((displaynumber.value.slice(0, 4) == "+234") ||
@@ -431,7 +432,7 @@ const loadCard9mobile = () => {
                 gettt.mobile += getbal;
                 localStorage.setItem("accountbal", JSON.stringify(gettt));
                 displaybalance.innerHTML = "Recharge successful. Your account has been credited with 9Mobile " + searchnetwork[q].cardamount + " . Your new account bal :₦" + gettt.mobile.toFixed(2);
-            } else if ((displaynumber.value.slice(0, 5) == "*222*") &&
+            } else if ((displaynumber.value.slice(0, 5) == "*311*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 20)) != -1) &&
                 (displaynumber.value.slice(20, 21) == "#") &&
                 (searchnetwork[q].cardname == "9mobile") &&

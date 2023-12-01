@@ -32,7 +32,7 @@ var getTimeDate = () => {
     }
 }
 
-setInterval(function () {
+setInterval( ()=> {
     getTimeDate();
 }, 1000);
 
@@ -52,7 +52,7 @@ const openMe = () => {
     forcal.style.display = "none";
     viewSection.style.display="none"
     saveContactContainer.style.display="none"
-    // saveContact.style.display = "none";
+    saveContact.style.display = "none";
 }
 
 
@@ -77,7 +77,7 @@ const goBack = () => {
         forMusic.style.display ="none";
         viewSection.style.display="none"
         saveContactContainer.style.display="none"
-        // saveContact.style.display = "none";
+        saveContact.style.display = "none";
     }
 
 }
@@ -92,7 +92,6 @@ const openGame = () => {
     forcallnumbers.style.display = "none";
     viewSection.style.display = "none";
 }
-
 const simSelect = () => {
     if (displaynumber.value == "") {
         return;
