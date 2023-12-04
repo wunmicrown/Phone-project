@@ -139,4 +139,5 @@ const cancelBalance = () => {
 const displayCal = () => {
     anotherinner.style.display = "none";
     forcal.style.display = "block";
+    callog.style.display = "block";
 }
