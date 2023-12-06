@@ -13,7 +13,6 @@ calculatingfirst.style.display = "none";
 saveContact.style.display="none";
 viewSection.style.display="none";
 saveContactContainer.style.display="none";
-
 let d = new Date();
 displaydate.innerHTML = d.toDateString();
 
@@ -41,19 +40,64 @@ let checkOpen = 0;
 const openMe = () => {
     checkOpen = 1;
     firstdisplay.style.display = "none";
-    forcalls.style.display = "none";
-    anotherinner.style.display = "block";
-    showbalance.style.display = "none";
-    infogenerate.style.display = "none";
-    callopacity.style.display = "none";
-    forcallnumbers.style.display = "none";
-    forgame.style.display = "none";
-    forMusic.style.display = "none"
-    forcal.style.display = "none";
-    viewSection.style.display="none"
-    saveContactContainer.style.display="none"
-    saveContact.style.display = "none";
-}
+
+    // Check if the elements are defined before trying to access their style property
+    if (document.getElementById("forcalls")) {
+        document.getElementById("forcalls").style.display = "none";
+    }
+
+    if (document.getElementById("anotherinner")) {
+        document.getElementById("anotherinner").style.display = "block";
+    }
+
+    if (document.getElementById("showbalance")) {
+        document.getElementById("showbalance").style.display = "none";
+    }
+
+    if (document.getElementById("infogenerate")) {
+        document.getElementById("infogenerate").style.display = "none";
+    }
+
+    if (document.getElementById("callopacity")) {
+        document.getElementById("callopacity").style.display = "none";
+    }
+
+    if (document.getElementById("forcallnumbers")) {
+        document.getElementById("forcallnumbers").style.display = "none";
+    }
+
+    if (document.getElementById("forgame")) {
+        document.getElementById("forgame").style.display = "none";
+    }
+
+    if (document.getElementById("forMusic")) {
+        document.getElementById("forMusic").style.display = "none";
+    }
+
+    if (document.getElementById("forcal")) {
+        document.getElementById("forcal").style.display = "none";
+    }
+
+    if (document.getElementById("viewSection")) {
+        document.getElementById("viewSection").style.display = "none";
+    }
+
+    if (document.getElementById("saveContactContainer")) {
+        document.getElementById("saveContactContainer").style.display = "none";
+    }
+
+    if (document.getElementById("saveContact")) {
+        document.getElementById("saveContact").style.display = "none";
+    }
+
+    if (document.getElementById("camera")) {
+        document.getElementById("camera").style.display = "none";
+    }
+
+    let d = new Date();
+    displaydate.innerHTML = d.toDateString();
+};
+
 
 
 const offMe = () => {
@@ -66,21 +110,57 @@ const goBack = () => {
     if (checkOpen == 0) {
         return;
     } else if (checkOpen == 1) {
-        forcalls.style.display = "none";
-        anotherinner.style.display = "block";
-        showbalance.style.display = "none";
-        infogenerate.style.display = "none";
-        callopacity.style.display = "none";
-        forcallnumbers.style.display = "none";
-        forgame.style.display = "none";
-        forcal.style.display = "none";
-        forMusic.style.display ="none";
-        viewSection.style.display="none"
-        saveContactContainer.style.display="none"
-        saveContact.style.display = "none";
-    }
+        if (document.getElementById("forcalls")) {
+            document.getElementById("forcalls").style.display = "none";
+        }
 
-}
+        if (document.getElementById("anotherinner")) {
+            document.getElementById("anotherinner").style.display = "block";
+        }
+
+        if (document.getElementById("showbalance")) {
+            document.getElementById("showbalance").style.display = "none";
+        }
+
+        if (document.getElementById("infogenerate")) {
+            document.getElementById("infogenerate").style.display = "none";
+        }
+
+        if (document.getElementById("callopacity")) {
+            document.getElementById("callopacity").style.display = "none";
+        }
+
+        if (document.getElementById("forcallnumbers")) {
+            document.getElementById("forcallnumbers").style.display = "none";
+        }
+
+        if (document.getElementById("forgame")) {
+            document.getElementById("forgame").style.display = "none";
+        }
+
+        if (document.getElementById("forMusic")) {
+            document.getElementById("forMusic").style.display = "none";
+        }
+
+        if (document.getElementById("forcal")) {
+            document.getElementById("forcal").style.display = "none";
+        }
+
+        if (document.getElementById("viewSection")) {
+            document.getElementById("viewSection").style.display = "none";
+        }
+
+        if (document.getElementById("saveContactContainer")) {
+            document.getElementById("saveContactContainer").style.display = "none";
+        }
+
+        if (document.getElementById("saveContact")) {
+            document.getElementById("saveContact").style.display = "none";
+        }
+
+    }
+};
+
 
 const openGame = () => {
     forgame.style.display = "block";
@@ -140,3 +220,31 @@ const displayCal = () => {
     anotherinner.style.display = "none";
     forcal.style.display = "block";
 }
+// const cameraDiv = document.getElementById("camera");
+
+// const camera1 = () => {
+//     cameraDiv.style.display = "block";
+//     forgame.style.display = "none";
+//     forcalls.style.display = "none";
+//     anotherinner.style.display = "none";
+//     showbalance.style.display = "none";
+//     infogenerate.style.display = "none";
+//     callopacity.style.display = "none";
+//     forcallnumbers.style.display = "none";
+//     viewSection.style.display = "none";
+//     cameraDiv.innerHTML = `<video id='video' width='100%' height='100%'></video> `;
+    
+//     const video = document.getElementById("video");
+
+//     navigator.mediaDevices.getUserMedia({
+//         video: true,
+//         audio: true
+//     }).then((stream) => {
+//         video.srcObject = stream;
+//         video.addEventListener("loadedmetadata", () => {
+//             video.autoplay = true;
+//             video.play();
+//         });
+//     }).catch((err) => alert(err.message));
+// };
+
