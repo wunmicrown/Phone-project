@@ -14,7 +14,7 @@ const loadCard = () => {
         const searchnetwork = JSON.parse(localStorage.getItem("Voucher"));
         for (let q = 0; q < searchnetwork.length; q++) {
             let searchingcode = searchnetwork[q].code;
-            if ((displaynumber.value.slice(0, 5) == "*311*") &&
+            if ((displaynumber.value.slice(0, 5) == "*312*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 22)) != -1) &&
                 (displaynumber.value.slice(22, 23) == "#") &&
                 (searchnetwork[q].cardname == "MTN") &&
@@ -28,7 +28,7 @@ const loadCard = () => {
                 gettt.mtnbal += getbal;
                 displaybalance.innerHTML = "Recharge successful. Your account has been credited with MTN " + searchnetwork[q].cardamount + " . Your new account bal :₦" + gettt.mtnbal.toFixed(2);
                 localStorage.setItem("accountbal", JSON.stringify(gettt))
-            } else if ((displaynumber.value.slice(0, 5) == "*311*") &&
+            } else if ((displaynumber.value.slice(0, 5) == "*312*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 22)) != -1) &&
                 (displaynumber.value.slice(22, 23) == "#") &&
                 (searchnetwork[q].cardname == "MTN") &&
@@ -147,7 +147,7 @@ const loadCardAirtel = () => {
         const searchnetwork = JSON.parse(localStorage.getItem("Voucher"));
         for (let q = 0; q < searchnetwork.length; q++) {
             let searchingcode = searchnetwork[q].code;
-            if ((displaynumber.value.slice(0, 5) == "*311*") &&
+            if ((displaynumber.value.slice(0, 5) == "*312*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 21)) != -1) &&
                 (displaynumber.value.slice(21, 22) == "#") &&
                 (searchnetwork[q].cardname == "Airtel") &&
@@ -160,7 +160,7 @@ const loadCardAirtel = () => {
                 gettt.airtelbal += getbal;
                 displaybalance.innerHTML = "Recharge successful. Your account has been credited with Airtel " + searchnetwork[q].cardamount + " . Your new account bal :₦" + gettt.airtelbal.toFixed(2);
                 localStorage.setItem("accountbal", JSON.stringify(gettt));
-            } else if ((displaynumber.value.slice(0, 5) == "*311*") &&
+            } else if ((displaynumber.value.slice(0, 5) == "*312*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 21)) != -1) &&
                 (displaynumber.value.slice(21, 22) == "#") &&
                 (searchnetwork[q].cardname == "Airtel") &&
@@ -168,7 +168,7 @@ const loadCardAirtel = () => {
                 selectsim.style.display = "none";
                 showbalance.style.display = "block";
                 displaybalance.innerHTML = "This card has been loaded by a customer. Thanks!!!";
-            } else if ((displaynumber.value.slice(0, 5) == "*311*") &&
+            } else if ((displaynumber.value.slice(0, 5) == "*312*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 21)) == -1) &&
                 (displaynumber.value.slice(21, 22) == "#") &&
                 (searchnetwork[q].cardname == "Airtel")) {
@@ -288,7 +288,7 @@ const loadCardGlo = () => {
         const searchnetwork = JSON.parse(localStorage.getItem("Voucher"));
         for (let q = 0; q < searchnetwork.length; q++) {
             let searchingcode = searchnetwork[q].code;
-            if ((displaynumber.value.slice(0, 5) == "*311*") &&
+            if ((displaynumber.value.slice(0, 5) == "*312*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 20)) != -1) &&
                 (displaynumber.value.slice(20, 21) == "#") &&
                 (searchnetwork[q].cardname == "Glo") &&
@@ -301,7 +301,7 @@ const loadCardGlo = () => {
                 gettt.global += getbal;
                 localStorage.setItem("accountbal", JSON.stringify(gettt));
                 displaybalance.innerHTML = "Recharge successful. Your account has been credited with GLO " + searchnetwork[q].cardamount + " . Your new account bal :₦" + gettt.global.toFixed(2);
-            } else if ((displaynumber.value.slice(0, 5) == "*311*") &&
+            } else if ((displaynumber.value.slice(0, 5) == "*312*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 20)) != -1) &&
                 (displaynumber.value.slice(20, 21) == "#") &&
                 (searchnetwork[q].cardname == "Glo") &&
@@ -419,7 +419,7 @@ const loadCard9mobile = () => {
         const searchnetwork = JSON.parse(localStorage.getItem("Voucher"));
         for (var q = 0; q < searchnetwork.length; q++) {
             let searchingcode = searchnetwork[q].code;
-            if ((displaynumber.value.slice(0, 5) == "*311*") &&
+            if ((displaynumber.value.slice(0, 5) == "*312*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 20)) != -1) &&
                 (displaynumber.value.slice(20, 21) == "#") &&
                 (searchnetwork[q].cardname == "9mobile") &&
@@ -432,7 +432,7 @@ const loadCard9mobile = () => {
                 gettt.mobile += getbal;
                 localStorage.setItem("accountbal", JSON.stringify(gettt));
                 displaybalance.innerHTML = "Recharge successful. Your account has been credited with 9Mobile " + searchnetwork[q].cardamount + " . Your new account bal :₦" + gettt.mobile.toFixed(2);
-            } else if ((displaynumber.value.slice(0, 5) == "*311*") &&
+            } else if ((displaynumber.value.slice(0, 5) == "*312*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 20)) != -1) &&
                 (displaynumber.value.slice(20, 21) == "#") &&
                 (searchnetwork[q].cardname == "9mobile") &&
