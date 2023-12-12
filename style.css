@@ -207,6 +207,12 @@ option{
 	border-radius: 10px;
 	user-select: none;
 }
+.screen-button-container div:hover{
+	cursor: pointer;
+}
+.screen-button-container2 div:hover{
+	cursor: pointer;
+}
 
 .screen-button-container2 div {
 	height: 50px;
