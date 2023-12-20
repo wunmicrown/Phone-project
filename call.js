@@ -14,7 +14,7 @@ const loadCard = () => {
         const searchnetwork = JSON.parse(localStorage.getItem("Voucher"));
         for (let q = 0; q < searchnetwork.length; q++) {
             let searchingcode = searchnetwork[q].code;
-            if ((displaynumber.value.slice(0, 5) == "*312*") &&
+            if ((displaynumber.value.slice(0, 5) == "*311*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 22)) != -1) &&
                 (displaynumber.value.slice(22, 23) == "#") &&
                 (searchnetwork[q].cardname == "MTN") &&
@@ -28,7 +28,7 @@ const loadCard = () => {
                 gettt.mtnbal += getbal;
                 displaybalance.innerHTML = "Recharge successful. Your account has been credited with MTN " + searchnetwork[q].cardamount + " . Your new account bal :₦" + gettt.mtnbal.toFixed(2);
                 localStorage.setItem("accountbal", JSON.stringify(gettt))
-            } else if ((displaynumber.value.slice(0, 5) == "*312*") &&
+            } else if ((displaynumber.value.slice(0, 5) == "*311*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 22)) != -1) &&
                 (displaynumber.value.slice(22, 23) == "#") &&
                 (searchnetwork[q].cardname == "MTN") &&
@@ -122,8 +122,9 @@ const loadCard = () => {
         callopacity.style.display = "none";
         forcalls.style.display = "none";
         forcallnumbers.style.display = "block";
-        invalidresult.style.display = "block";
-        showsomeresult.innerHTML = "This number does not exist.please, check the number and try again later.";
+        invalidresult.style.display = "none";
+        audioElement = new Audio('Number Does Not Exist.mp3');
+            audioElement.play();
         calculatingfirst.style.display = "none";
         callersno.innerHTML = displaynumber.value;
         network.innerHTML = "MTN";
@@ -131,9 +132,10 @@ const loadCard = () => {
         callopacity.style.display = "none";
         forcalls.style.display = "none";
         forcallnumbers.style.display = "block";
-        invalidresult.style.display = "block";
+        invalidresult.style.display = "none";
+        audioElement = new Audio('Number Does Not Exist.mp3');
+            audioElement.play();
         calculatingfirst.style.display = "none";
-        showsomeresult.innerHTML = "This number does not exist.please, check the number and try again later.";
         callersno.innerHTML = displaynumber.value;
         network.innerHTML = "MTN";
     }
@@ -147,7 +149,7 @@ const loadCardAirtel = () => {
         const searchnetwork = JSON.parse(localStorage.getItem("Voucher"));
         for (let q = 0; q < searchnetwork.length; q++) {
             let searchingcode = searchnetwork[q].code;
-            if ((displaynumber.value.slice(0, 5) == "*312*") &&
+            if ((displaynumber.value.slice(0, 5) == "*311*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 21)) != -1) &&
                 (displaynumber.value.slice(21, 22) == "#") &&
                 (searchnetwork[q].cardname == "Airtel") &&
@@ -262,8 +264,9 @@ const loadCardAirtel = () => {
         callopacity.style.display = "none";
         forcalls.style.display = "none";
         forcallnumbers.style.display = "block";
-        invalidresult.style.display = "block";
-        showsomeresult.innerHTML = "This number does not exist.please, check the number and try again later.";
+        invalidresult.style.display = "none";
+        audioElement = new Audio('Number Does Not Exist.mp3');
+            audioElement.play();
         calculatingfirst.style.display = "none";
         callersno.innerHTML = displaynumber.value;
         network.innerHTML = "Airtel";
@@ -271,8 +274,9 @@ const loadCardAirtel = () => {
         callopacity.style.display = "none";
         forcalls.style.display = "none";
         forcallnumbers.style.display = "block";
-        invalidresult.style.display = "block";
-        showsomeresult.innerHTML = "This number does not exist.please, check the number and try again later.";
+        invalidresult.style.display = "none";
+        audioElement = new Audio('Number Does Not Exist.mp3');
+            audioElement.play();
         calculatingfirst.style.display = "none";
         callersno.innerHTML = displaynumber.value;
         network.innerHTML = "Airtel";
@@ -288,7 +292,7 @@ const loadCardGlo = () => {
         const searchnetwork = JSON.parse(localStorage.getItem("Voucher"));
         for (let q = 0; q < searchnetwork.length; q++) {
             let searchingcode = searchnetwork[q].code;
-            if ((displaynumber.value.slice(0, 5) == "*312*") &&
+            if ((displaynumber.value.slice(0, 5) == "*311*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 20)) != -1) &&
                 (displaynumber.value.slice(20, 21) == "#") &&
                 (searchnetwork[q].cardname == "Glo") &&
@@ -301,7 +305,7 @@ const loadCardGlo = () => {
                 gettt.global += getbal;
                 localStorage.setItem("accountbal", JSON.stringify(gettt));
                 displaybalance.innerHTML = "Recharge successful. Your account has been credited with GLO " + searchnetwork[q].cardamount + " . Your new account bal :₦" + gettt.global.toFixed(2);
-            } else if ((displaynumber.value.slice(0, 5) == "*312*") &&
+            } else if ((displaynumber.value.slice(0, 5) == "*311*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 20)) != -1) &&
                 (displaynumber.value.slice(20, 21) == "#") &&
                 (searchnetwork[q].cardname == "Glo") &&
@@ -394,8 +398,9 @@ const loadCardGlo = () => {
         callopacity.style.display = "none";
         forcalls.style.display = "none";
         forcallnumbers.style.display = "block";
-        invalidresult.style.display = "block";
-        showsomeresult.innerHTML = "This number does not exist.please, check the number and try again later.";
+        invalidresult.style.display = "none";
+        audioElement = new Audio('Number Does Not Exist.mp3');
+            audioElement.play();
         calculatingfirst.style.display = "none";
         callersno.innerHTML = displaynumber.value;
         network.innerHTML = "Glo";
@@ -403,8 +408,9 @@ const loadCardGlo = () => {
         callopacity.style.display = "none";
         forcalls.style.display = "none";
         forcallnumbers.style.display = "block";
-        invalidresult.style.display = "block";
-        showsomeresult.innerHTML = "This number does not exist.please, check the number and try again later.";
+        invalidresult.style.display = "none";
+        audioElement = new Audio('Number Does Not Exist.mp3');
+            audioElement.play();
         calculatingfirst.style.display = "none";
         callersno.innerHTML = displaynumber.value;
         network.innerHTML = "Glo";
@@ -419,7 +425,7 @@ const loadCard9mobile = () => {
         const searchnetwork = JSON.parse(localStorage.getItem("Voucher"));
         for (var q = 0; q < searchnetwork.length; q++) {
             let searchingcode = searchnetwork[q].code;
-            if ((displaynumber.value.slice(0, 5) == "*312*") &&
+            if ((displaynumber.value.slice(0, 5) == "*311*") &&
                 (searchingcode.search(displaynumber.value.slice(5, 20)) != -1) &&
                 (displaynumber.value.slice(20, 21) == "#") &&
                 (searchnetwork[q].cardname == "9mobile") &&
@@ -525,8 +531,9 @@ const loadCard9mobile = () => {
         callopacity.style.display = "none";
         forcalls.style.display = "none";
         forcallnumbers.style.display = "block";
-        invalidresult.style.display = "block";
-        showsomeresult.innerHTML = "This number does not exist.please, check the number and try again later.";
+        invalidresult.style.display = "none";
+        audioElement = new Audio('Number Does Not Exist.mp3');
+            audioElement.play();
         calculatingfirst.style.display = "none";
         callersno.innerHTML = displaynumber.value;
         network.innerHTML = "9Mobile";
@@ -534,8 +541,9 @@ const loadCard9mobile = () => {
         callopacity.style.display = "none";
         forcalls.style.display = "none";
         forcallnumbers.style.display = "block";
-        invalidresult.style.display = "block";
-        showsomeresult.innerHTML = "This number does not exist.please, check the number and try again later.";
+        invalidresult.style.display = "none";
+        audioElement = new Audio('Number Does Not Exist.mp3');
+            audioElement.play();
         calculatingfirst.style.display = "none";
         callersno.innerHTML = displaynumber.value;
         network.innerHTML = "9Mobile";
